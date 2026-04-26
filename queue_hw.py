@@ -29,8 +29,11 @@ class Queue:
             print(f"{self.queue[0]} has bought a ticket.")
             self.queue.pop(0)
             
+    def size(self):
+        return len(self.queue)
+            
 q=Queue()
 q.enqueue("David")
 
-while q.is_empty() == False:
+for i in range(0, q.size()):
     q.dequeue()
